@@ -1,14 +1,31 @@
 const YEAR = new Date().getFullYear()
 
 export default {
+  // 1. Tady nastavíme to horní menu
+  navs: [
+    {
+      url: '/',
+      name: 'Home'
+    },
+    {
+      url: '/about',
+      name: 'About Me'
+    },
+    {
+      url: '/projects',
+      name: 'Projects'
+    },
+    {
+      url: 'mailto:tvuj@email.cz', // Sem si pak dej svůj mail
+      name: 'Kontakt'
+    }
+  ],
+
+  // 2. Tady je tvoje upravená patička (copyright)
   footer: (
     <small style={{ display: 'block', marginTop: '8rem' }}>
-      <time>{YEAR}</time> © Your Name.
-      <a href="/feed.xml">RSS</a>
+      <time>{YEAR}</time> © Petra. Všechna práva vyhrazena.
       <style jsx>{`
-        a {
-          float: right;
-        }
         @media screen and (max-width: 480px) {
           article {
             padding-top: 2rem;
@@ -17,5 +34,8 @@ export default {
         }
       `}</style>
     </small>
-  )
+  ),
+
+  // 3. Tohle přidá ten "fancy" nádech - změní barvu prvků na zelenou (hue 150)
+  primaryHue: 150,
 }
