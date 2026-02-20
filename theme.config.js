@@ -1,41 +1,32 @@
 const YEAR = new Date().getFullYear()
 
 export default {
-  // 1. Tady nastavíme to horní menu
-  navs: [
-    {
-      url: '/',
-      name: 'Home'
-    },
-    {
-      url: '/about',
-      name: 'About Me'
-    },
-    {
-      url: '/projects',
-      name: 'Projects'
-    },
-    {
-      url: 'mailto:tvuj@email.cz', // Sem si pak dej svůj mail
-      name: 'Kontakt'
-    }
-  ],
-
-  // 2. Tady je tvoje upravená patička (copyright)
-  footer: (
-    <small style={{ display: 'block', marginTop: '8rem' }}>
-      <time>{YEAR}</time> © Petra. Všechna práva vyhrazena.
-      <style jsx>{`
-        @media screen and (max-width: 480px) {
-          article {
-            padding-top: 2rem;
-            padding-bottom: 4rem;
-          }
-        }
-      `}</style>
-    </small>
-  ),
-
-  // 3. Tohle přidá ten "fancy" nádech - změní barvu prvků na zelenou (hue 150)
-  primaryHue: 150,
+  logo: <strong>PETRA</strong>,
+  project: {
+    link: 'https://github.com/petra-lol'
+  },
+  // Tohle by mělo vytvořit menu v horní liště
+  navbar: {
+    extraContent: (
+      <div style={{ display: 'flex', gap: '20px' }}>
+        <a href="/">Home</a>
+        <a href="/about">O mně</a>
+        <a href="/projects">Projekty</a>
+        <a href="/contact">Kontakt</a>
+      </div>
+    )
+  },
+  footer: {
+    text: (
+      <span>
+        {YEAR} © Petra. Všechna práva vyhrazená.
+      </span>
+    )
+  },
+  head: (
+    <>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Petra | Portfolio</title>
+    </>
+  )
 }
