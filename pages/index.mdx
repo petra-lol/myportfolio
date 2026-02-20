@@ -1,31 +1,51 @@
 import { Callout } from 'nextra/components'
 
-<div style={{ display: 'flex', justifyContent: 'flex-end', gap: '20px', fontSize: '0.9em', padding: '10px 0', borderBottom: '1px solid #222', marginBottom: '40px' }}>
-  <a href="/" style={{ color: '#fff', textDecoration: 'none' }}>Home</a>
-  <a href="/about" style={{ color: '#888', textDecoration: 'none' }}>O mně</a>
-  <a href="/projects" style={{ color: '#888', textDecoration: 'none' }}>Projekty</a>
-  <a href="mailto:tvuj@email.cz" style={{ color: '#888', textDecoration: 'none' }}>Kontakt</a>
+<div style={{ position: 'sticky', top: 0, backgroundColor: 'rgba(17,17,17,0.8)', backdropFilter: 'blur(8px)', display: 'flex', justifyContent: 'flex-end', gap: '20px', fontSize: '0.9em', padding: '15px 0', borderBottom: '1px solid #222', zIndex: 1000 }}>
+  <a href="#home" style={{ color: '#fff', textDecoration: 'none' }}>Home</a>
+  <a href="#about" style={{ color: '#888', textDecoration: 'none' }}>O mně</a>
+  <a href="#projects" style={{ color: '#888', textDecoration: 'none' }}>Projekty</a>
+  <a href="#contact" style={{ color: '#888', textDecoration: 'none' }}>Kontakt</a>
 </div>
 
-# <span style={{ fontSize: '1.1em', lineHeight: '1.4', fontWeight: '700', display: 'block', background: 'linear-gradient(90deg, #fff, #999)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', textTransform: 'uppercase' }}>Teorie v procesu, výsledky v praxi. <br/>Vyvíjím řešení, která rostou se mnou.</span>
+<div id="home" style={{ paddingTop: '40px' }}>
+  # <span style={{ fontSize: '1.1em', lineHeight: '1.4', fontWeight: '700', display: 'block', background: 'linear-gradient(90deg, #fff, #999)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', textTransform: 'uppercase' }}>Teorie v procesu, výsledky v praxi. <br/>Vyvíjím řešení, která rostou se mnou.</span>
 
-Jako studentka IT propojuji čerstvé znalosti z vývoje s roční praxí ve **Vishay**. Zaměřuji se na backendovou logiku v **C#** a správu **SQL** databází, kde teorie končí a začíná reálná efektivita.
-
----
-
-<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '15px', marginTop: '25px' }}>
-  <div style={{ padding: '15px', borderRadius: '10px', border: '1px solid #333', background: 'rgba(255,255,255,0.02)' }}>
-    ### 🎯 C# Development
-    Vývoj aplikací se zaměřením na logiku a stabilitu v průmyslovém prostředí.
-  </div>
-  <div style={{ padding: '15px', borderRadius: '10px', border: '1px solid #333', background: 'rgba(255,255,255,0.02)' }}>
-    ### 🗄️ SQL & Data
-    Efektivní správa databází. Kód je pro mě jen tak dobrý, jak kvalitní jsou data, která zpracovává.
-  </div>
+  Jako studentka IT propojuji čerstvé znalosti z vývoje s roční praxí ve **Vishay**. Zaměřuji se na backendovou logiku v **C#** a správu **SQL** databází, kde teorie končí a začíná reálná efektivita.
 </div>
 
 ---
 
-<Callout type="info" emoji="🚀">
-  **Aktuálně:** Junior Developer ve Vishay Intertechnology. Pracuji na projektech, které digitalizují a zpřehledňují výrobu.
-</Callout>
+<div id="about" style={{ paddingTop: '60px' }}>
+  <p style={{ textTransform: 'uppercase', fontSize: '0.7em', color: '#555', fontWeight: 'bold', letterSpacing: '0.1em', marginBottom: '10px' }}>O mně / Skills</p>
+  
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '15px' }}>
+    <div style={{ padding: '15px', borderRadius: '10px', border: '1px solid #333', background: 'rgba(255,255,255,0.02)' }}>
+      ### 🎯 C# Development
+      Vývoj aplikací se zaměřením na logiku a stabilitu v průmyslovém prostředí.
+    </div>
+    <div style={{ padding: '15px', borderRadius: '10px', border: '1px solid #333', background: 'rgba(255,255,255,0.02)' }}>
+      ### 🗄️ SQL & Data
+      Efektivní správa databází. Kód je pro mě jen tak dobrý, jak kvalitní jsou data, která zpracovává.
+    </div>
+  </div>
+</div>
+
+---
+
+<div id="projects" style={{ paddingTop: '60px' }}>
+  <p style={{ textTransform: 'uppercase', fontSize: '0.7em', color: '#555', fontWeight: 'bold', letterSpacing: '0.1em', marginBottom: '10px' }}>Pracovní zkušenosti / Projekty</p>
+
+  <Callout type="info" emoji="🚀">
+    **Aktuálně:** Junior Developer ve Vishay Intertechnology. Pracuji na projektech, které digitalizují a zpřehledňují výrobu.
+  </Callout>
+</div>
+
+---
+
+<div id="contact" style={{ paddingTop: '60px', marginBottom: '100px' }}>
+  <p style={{ textTransform: 'uppercase', fontSize: '0.7em', color: '#555', fontWeight: 'bold', letterSpacing: '0.1em', marginBottom: '10px' }}>Kontakt</p>
+  
+  Máte zájem o spolupráci nebo se chcete na něco zeptat? 
+  
+  [LinkedIn](https://www.linkedin.com/) | [Email](mailto:tvuj@email.cz) | [GitHub](https://github.com/petra-lol)
+</div>
